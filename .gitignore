@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ECommerceSite/.vs/ECommerceSite/v17/.suo
+/ECommerceSite/.vs/ECommerceSite/DesignTimeBuild/.dtbcache.v2
