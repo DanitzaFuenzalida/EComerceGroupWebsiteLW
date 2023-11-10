@@ -1,10 +1,97 @@
-﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page | Welcome To Group4</title>
+</head>
+<body id="page-top">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>This is group 4's website!'</a>.</p> <!--testing Azure Deployment by changing link to see if it goes live-->
-</div>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-inverse navbar-blue navbar-static-top">
+        <div class="container-fluid">
+            <!-- NAVBAR BRAND -->
+            <a href="/" class="navbar-brand">
+                <img src="../wwwroot/img/logoWhiteBG.png" alt="Group4 Logo" class="navbar-logo" />
+            </a>
+            <!-- SITE SEARCH -->
+            <form id="nav-search" class="input-group" role="search" onsubmit="return submitFunction();">
+                <input type="text" id="nav-search-input" class="form-control" placeholder="What are you looking for?" />
+                <span class="input-group-btn">
+                    <button id="nav-search-submit" class="btn btn-default btn-submit" type="submit"><img src="../wwwroot/img/goIcon.png" alt="goButton" /></button>
+                </span>
+            </form>
+            <!-- ACCOUNT LINKS -->
+            <div id="nav-profileMain" class="nav navbar-nav">
+                <button type="button" class="navbar-profile">
+                    <img src="../wwwroot/img/profileIcon.png" alt="My Profile" />
+                </button>
+            </div>
+            <div id="nav-shoppingCart" class="nav navbar-nav">
+                <button type="button" class="navbar-cart">
+                    <img src="../wwwroot/img/cartIcon.png" alt="Shopping Cart" />
+                </button>
+            </div>
+            <ul id="nav-accountLinks" class="nav navbar-nav">
+                <li id="nav-userProfile" class="dropdown">
+                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="../wwwroot/img/menuIcon.png" alt="Account Links" /></a>
+                    <ul id="nav-userMenu" class="dropdown-menu">
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">&nbsp;&nbsp;Your Account</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">&nbsp;&nbsp;Shopping Cart</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">&nbsp;&nbsp;Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav><!-- end of NAVBAR -->
+    <!-- FOOTER -->
+    <footer id="footer" class="footer-blue">
+        <div class="container">
+            <!-- SITELINKS -->
+            <div id="sitelinks" class="clearfix">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">About</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Contact&nbsp;Us</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Careers</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Help</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Enterprising</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Store&nbsp;Finder</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Official&nbsp;Partners</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Warehousing</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Customer&nbsp;Service</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">My&nbsp;Orders</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Return&nbsp;Policy</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Warranties</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="list-unstyled">
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Privacy&nbsp;Policy</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Terms &amp; Conditions</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Product&nbsp;Registration</a></li>
+                        <li><a href="../wwwroot/img/logoWhiteBG.png">Security</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix visible-sm-block"></div>
+            </div>
+            <!-- LOGO -->
+            <div id="logo-col" class="col-xs-12">
+                <a href="/">
+                    <img src="../wwwroot/img/logoTransparent.png" alt="Group4 Logo" class="footer-logo" />
+                </a>
+            </div>
+        </div>
+    </footer><!-- end of FOOTER -->
+</body>
+</html>
