@@ -13,7 +13,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddRazorPages();
+
+// Add MVC services to the container
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -22,9 +24,8 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var dbContext = services.GetRequiredService<ApplicationDbContext>();
-    dbContext.ApplyMigrations();
+    dbContext.Database.Migrate();
 }
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -43,8 +44,15 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // Ensure authentication is called before authorization if using identity
 app.UseAuthorization();
 
+// Map controller routes
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+// support for Razor Pages
 app.MapRazorPages();
 
 app.Run();
