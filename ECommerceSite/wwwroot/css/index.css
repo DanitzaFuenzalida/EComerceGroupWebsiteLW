@@ -19,3 +19,62 @@ body
     font-family: museosans, sans-serif;
 }
 
+nav
+{
+    position: fixed;
+    top: 0px;
+    padding: 15px;
+    background-color: ghostwhite;
+    color: black;
+}
+
+#pagebody
+{
+    position: absolute;
+}
+
+#pagecontents
+{
+    position: absolute;
+}
+
+#banner
+{
+    position: absolute;
+}
+
+#container
+{
+    position: absolute;
+    padding: 5px;
+}
+
+footer
+{
+    position: fixed;
+    padding: 50px;
+    background-color: darkgrey;
+    bottom: 0px;
+    color: black;
+}
+
+#logo-col
+{
+    position: static;
+    left: 0px;
+}
+
+#sitelinks
+{
+    position: static;
+    right: 0px;
+}
+
+.footer-cols {
+    column-count: 4;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-gap: 50px;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+}
