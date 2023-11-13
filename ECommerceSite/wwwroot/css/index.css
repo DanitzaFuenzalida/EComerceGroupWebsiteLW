@@ -1,5 +1,4 @@
-﻿@font-face
-{
+﻿@font-face {
     font-family: museosans;
     src: url(../fonts/museosans500.woff2) format('woff2');
 }
@@ -9,72 +8,99 @@
     src: url(../fonts//museosans500italic.woff2) format('woff2');
 }
 
-body
-{
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
     background-color: ghostwhite;
 }
 
-.sitefont
-{
+.sitefont {
     font-family: museosans, sans-serif;
 }
 
-nav
-{
-    position: fixed;
-    top: 0px;
+#navbar {
+    height: 200px;
     padding: 15px;
     background-color: ghostwhite;
     color: black;
 }
 
-#pagebody
-{
-    position: absolute;
+.navbar-prof-img {
+    width: 10px;
+    height: auto;
 }
 
-#pagecontents
-{
-    position: absolute;
+.navbar-logo {
+    width: 300px;
+    height: auto;
+    display: inline-block;
 }
 
-#banner
-{
-    position: absolute;
+span {
+    display: inline-block;
 }
 
-#container
-{
-    position: absolute;
+.input-group {
+    display: inline-block;
+}
+
+#pagebody {
+    padding-bottom: 200px;
+}
+
+#pagecontents {
+    position: relative;
+}
+
+#banner {
+    position: relative;
+}
+
+#container {
+    position: relative;
     padding: 5px;
 }
 
-footer
-{
-    position: fixed;
-    padding: 50px;
+#footer {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     background-color: darkgrey;
-    bottom: 0px;
     color: black;
 }
 
-#logo-col
-{
-    position: static;
-    left: 0px;
+.footer-logo {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    left: 200px;
 }
 
-#sitelinks
-{
-    position: static;
-    right: 0px;
-}
-
-.footer-cols {
+#sitelinks {
     column-count: 4;
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-gap: 50px;
-    -webkit-column-gap: 50px;
-    -moz-column-gap: 50px;
+}
+
+.col-md-3 {
+    display: inline-block;
+    padding: 10px;
 }
