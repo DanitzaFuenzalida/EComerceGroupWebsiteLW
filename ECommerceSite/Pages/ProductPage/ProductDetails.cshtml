@@ -1,0 +1,13 @@
+﻿@page "{id:int}"
+@model ECommerceSite.Pages.ProductDetailsModel
+
+<h2>Product Details</h2>
+
+<div>
+    <h4>@Model.Product.Name</h4>
+    <p>@Model.Product.Description</p>
+    <p>Price: $@Model.Product.Price</p>
+    <p>Stock: @Model.Product.StockQuantity</p>
+    <p>Category: @Model.Product.Category</p>
+    <!-- Add more details as needed -->
+</div>
