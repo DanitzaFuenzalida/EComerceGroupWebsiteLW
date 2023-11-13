@@ -9,6 +9,8 @@
         public int StockQuantity { get; set; }
         public string Category { get; set; }
         // Add other properties like images, ratings, etc.
+
+        public string Color { get; set; }
     }
 }
 
