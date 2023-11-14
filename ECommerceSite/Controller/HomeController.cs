@@ -2,7 +2,7 @@
 
 namespace ECommerceSite.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
         // GET: Views/Home/Index.cshtml
         public IActionResult Index()

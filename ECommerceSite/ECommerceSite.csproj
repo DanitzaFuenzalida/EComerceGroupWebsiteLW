@@ -15,4 +15,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controller\Requested Controller Additions\" />
+    <Folder Include="Model\Requested Model Additions\" />
+  </ItemGroup>
+
 </Project>
