@@ -1,25 +1,14 @@
-/*
-using ECommerceSite.Model;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ECommerceSite.Pages
+namespace ECommerceSite.Pages.ProductPage
 {
-    public class IndexModel : PageModel
+    public class ShopModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
-
         public void OnGet()
         {
+            // Initialization code or GET requests
         }
+
+        // Add methods (OnPost or form submissions)
     }
 }
-
-
-*/
-
