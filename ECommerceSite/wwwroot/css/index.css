@@ -74,6 +74,12 @@ span {
     position: relative;
 }
 
+.banner-title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
 #container {
     position: relative;
     padding: 5px;
