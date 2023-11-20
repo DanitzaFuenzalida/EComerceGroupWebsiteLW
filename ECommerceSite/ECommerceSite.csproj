@@ -8,16 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controller\Requested Controller Additions\**" />
+    <Compile Remove="Model\Requested Model Additions\**" />
+    <Content Remove="Controller\Requested Controller Additions\**" />
+    <Content Remove="Model\Requested Model Additions\**" />
+    <EmbeddedResource Remove="Controller\Requested Controller Additions\**" />
+    <EmbeddedResource Remove="Model\Requested Model Additions\**" />
+    <None Remove="Controller\Requested Controller Additions\**" />
+    <None Remove="Model\Requested Model Additions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controller\Requested Controller Additions\" />
-    <Folder Include="Model\Requested Model Additions\" />
   </ItemGroup>
 
 </Project>

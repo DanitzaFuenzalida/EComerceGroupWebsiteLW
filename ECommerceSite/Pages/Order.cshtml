@@ -1,0 +1,26 @@
+﻿@page
+@model ECommerceSite.Pages.OrderModel
+<!--Reference to OrderItem.cs -->
+
+<h2>Order Details</h2>
+<!--OrderItem.cs fields called directly to be displayed on page-->
+<div>
+    <p><strong>Order ID:</strong> @Model.SampleOrder.OrderId</p>
+    <p><strong>Order Date:</strong> @Model.SampleOrder.OrderDate.ToString("dd/MM/yyyy")</p>
+    <p><strong>User ID:</strong> @Model.SampleOrder.UserId</p>
+    <p><strong>Status:</strong> @Model.SampleOrder.Status</p>
+    <p><strong>Total Amount:</strong> @Model.SampleOrder.TotalAmount.ToString("C")</p>
+
+    <h3>Order Items</h3>
+    <ul>
+        @foreach (var item in Model.SampleOrder.OrderItems)
+        {
+            <li>
+                Order Item ID: @item.OrderItemId,
+                Product ID: @item.ProductId,
+                Quantity: @item.Quantity,
+                Unit Price: @item.UnitPrice.ToString("C")
+            </li>
+        }
+    </ul>
+</div>

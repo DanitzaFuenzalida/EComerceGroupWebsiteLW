@@ -13,6 +13,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+// Add Razor Pages service to the container.
+builder.Services.AddRazorPages();
+
 
 // Add MVC services to the container
 builder.Services.AddControllersWithViews();
