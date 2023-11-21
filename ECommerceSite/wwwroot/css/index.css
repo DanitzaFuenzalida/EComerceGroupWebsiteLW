@@ -92,6 +92,18 @@ body {
     left: 10%;
 }
 
+.banner-info {
+    position: absolute;
+    top: 18%;
+    left: 10%;
+}
+
+.banner-btn {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
 #container {
     position: relative;
     padding: 5px;
