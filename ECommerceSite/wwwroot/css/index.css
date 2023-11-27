@@ -137,16 +137,18 @@ input {
 .footer-logo {
     width: 300px;
     height: auto;
-    display: inline-block;
-    left: 200px;
+    display: inline;
+    margin-left: 100px;
+    margin-top: 25px;
+    float: left;
+}
+
+.footer-cols {
+    margin-top: 25px;
 }
 
 .collection-cards-row {
     column-count: 3;
-}
-
-#sitelinks {
-    column-count: 4;
 }
 
 .col-sm-4 {
