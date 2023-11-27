@@ -19,6 +19,10 @@ body {
     position: relative;
 }
 
+h4 {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -87,7 +91,7 @@ input {
 }
 
 #pagebody {
-    padding-bottom: 300px;
+    padding-bottom: 200px;
 }
 
 #pagecontents {
@@ -124,8 +128,40 @@ input {
     padding: 5px;
 }
 
+.collection-cards-row {
+    display: flex;
+}
+
+.collection-card-1 {
+    display: inline-block;
+    float: left;
+    padding: 40px;
+}
+
+.collection-card-2 {
+    display: inline-block;
+    padding: 40px;
+}
+
+.collection-card-3 {
+    display: inline-block;
+    float: right;
+    padding: 40px;
+}
+
+.btn-row {
+    width: 500px;
+    margin-top: 20px;
+}
+
+.btn-collection {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
 #footer {
-    height: 300px;
+    height: 200px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -145,10 +181,6 @@ input {
 
 .footer-cols {
     margin-top: 25px;
-}
-
-.collection-cards-row {
-    column-count: 3;
 }
 
 .col-sm-4 {
