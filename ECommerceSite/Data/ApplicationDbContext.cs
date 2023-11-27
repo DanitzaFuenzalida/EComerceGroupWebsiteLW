@@ -9,7 +9,7 @@ namespace ECommerceSite.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Database.EnsureCreated();
+            // Database.EnsureCreated();
         }
         public DbSet<User> User { get; set; }
         public DbSet<Address> Address { get; set; }
