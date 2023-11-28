@@ -23,12 +23,12 @@
                     <img src="/img/logoWhiteBG.png" alt="Group4 Logo" class="navbar-logo" />
                 </a>
                 <!-- SITE SEARCH -->
-                <form id="nav-search" class="input-group navitem" role="search" onsubmit="return submitFunction();">
+                <div id="nav-search" class="input-group navitem" role="search" onsubmit="return submitFunction();">
                     <input type="text" id="nav-search-input" class="form-control sitefont" placeholder="What are you looking for?" />
-                    <div class="input-group-btn">
-                        <button id="nav-search-submit" class="btn btn-default btn-submit" type="submit"><img src="/img/goIcon.png" alt="Search" /></button>
-                    </div>
-                </form>
+                    <span class="input-group-btn">
+                        <button id="nav-search-submit" class="btn btn-default btn-submit" type="submit"><img src="/img/goIcon.png" class="nav-go" alt="Search" /></button>
+                    </span>
+                </div>
                 <!-- ACCOUNT LINKS -->
                 <div id="nav-profileMain" class="navitem">
                     <button type="button" class="navbar-profile">
@@ -63,7 +63,7 @@
                             <div class="col-md-6 col-xs-12 text-col vcenter">
                                 <img src="/img/MainPageBanner.png" alt="Autumn Collections" style="width:100%;" />
                                 <h1 class="banner-title">Autumn&#39;s&nbsp;here.</h1>
-                                <p class="info info-lg banner-info">Save 30% on select seasonal collections.</p>
+                                <p class="info info-lg banner-info">Save 30% on select<br> seasonal collections.</p>
                                 <div class="banner-btn btn-row">
                                     <a href="/Order" class="btn btn-blk btn-margin-0">Go</a> <!-- CHANGE Links to Order Page Currently-->
                                 </div>
@@ -76,25 +76,25 @@
                     <div class="container">
                         <div class="collection-cards-row sitefont">
                             <div class="col-sm-4 col-xs-12">
-                                <div class="collection-card-1"> 
+                                <div class="collection-card-1">
                                     <h4>New Fall Styles</h4>
                                     <img src="/img/furniturePlaceholder_500x500.jpg" alt="New Fall Styles" />
                                     <div class="btn-row">
-                                        <a href="/Order" class="btn btn-blk btn-margin-0">Go</a> <!-- CHANGE Links to Order Page Currently-->
+                                        <a href="/Order" class="btn btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
                                     </div>
                                 </div>
-                                <div class="collection-card-2"> 
-                                    <h4>New Fall Styles</h4>
+                                <div class="collection-card-2">
+                                    <h4>Halloween Flair</h4>
                                     <img src="/img/furniturePlaceholder_500x500.jpg" alt="Halloween Flair" />
                                     <div class="btn-row">
-                                        <a href="/Order" class="btn btn-blk btn-margin-0">Go</a> <!-- CHANGE Links to Order Page Currently-->
+                                        <a href="/Order" class="btn btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
                                     </div>
                                 </div>
-                                <div class="collection-card-3"> 
-                                    <h4>New Fall Styles</h4>
+                                <div class="collection-card-3">
+                                    <h4>Summer Sales</h4>
                                     <img src="/img/furniturePlaceholder_500x500.jpg" alt="Summer Sales" />
                                     <div class="btn-row">
-                                        <a href="/Order" class="btn btn-primary btn-blk btn-margin-0">Go</a> <!-- CHANGE Links to Order Page Currently-->
+                                        <a href="/Order" class="btn btn-primary btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +151,6 @@
                             <li><a href="/img/goIcon.png">Security</a></li>
                         </ul>
                     </div>
-                    <div class="clearfix visible-sm-block"></div>
                 </div>
             </div>
         </footer><!-- end of FOOTER -->
