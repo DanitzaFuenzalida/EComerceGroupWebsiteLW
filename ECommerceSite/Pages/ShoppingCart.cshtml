@@ -1,0 +1,26 @@
+﻿@page
+@model ECommerceSite.Pages.ShoppingCartModel
+@{
+
+    ViewData["Title"] = "Shopping Cart Checkout";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Shopping Cart items -->
+<div>
+    <!-- TODO: displaying total amount -->
+    <p>Total Amount: <span id="totalAmount">To Be Implemented</span></p>
+
+    <!-- Confirm Order Button -->
+    <button onclick="confirmPurchase()">Confirm Order</button>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmPurchase() {
+            // TODO: JavaScript code to confirming the purchase
+            alert('Purchase confirmed!');
+        }
+    </script>
+}

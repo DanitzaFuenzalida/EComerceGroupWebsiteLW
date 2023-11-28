@@ -1,5 +1,9 @@
 {
-  "ExpandedNodes": [],
-  "SelectedNode": "\\ECommerceSite.sln",
+  "ExpandedNodes": [
+    "",
+    "\\ECommerceSite",
+    "\\ECommerceSite\\Pages"
+  ],
+  "SelectedNode": "\\ECommerceSite\\Pages",
   "PreviewInSolutionExplorer": false
 }
