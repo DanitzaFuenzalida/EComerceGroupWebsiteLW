@@ -1,26 +1,76 @@
 ﻿@page
 @model ECommerceSite.Pages.OrderModel
 <!--Reference to OrderItem.cs -->
-
-<h2>Order Details</h2>
 <!--OrderItem.cs fields called directly to be displayed on page-->
 <div>
-    <p><strong>Order ID:</strong> @Model.SampleOrder.OrderId</p>
-    <p><strong>Order Date:</strong> @Model.SampleOrder.OrderDate.ToString("dd/MM/yyyy")</p>
-    <p><strong>User ID:</strong> @Model.SampleOrder.UserId</p>
-    <p><strong>Status:</strong> @Model.SampleOrder.Status</p>
-    <p><strong>Total Amount:</strong> @Model.SampleOrder.TotalAmount.ToString("C")</p>
 
-    <h3>Order Items</h3>
+    <!-- Display the list of products -->
+    @if (Model.Orders != null && Model.Orders.Any())
+{
+   
+    <h2>Order List </h2>
+    <h3> --------------------------- </h3>
     <ul>
-        @foreach (var item in Model.SampleOrder.OrderItems)
+            @foreach (var order in Model.Orders)
         {
-            <li>
-                Order Item ID: @item.OrderItemId,
-                Product ID: @item.ProductId,
-                Quantity: @item.Quantity,
-                Unit Price: @item.UnitPrice.ToString("C")
-            </li>
+            
+                <p><strong>Order ID:</strong> @order.OrderId</p>
+                <p><strong>Order Date:</strong> @order.OrderDate.ToString("dd/MM/yyyy")</p>
+                <p><strong>User ID:</strong> @order.UserId</p>
+                <p><strong>Status:</strong> @order.Status</p>
+                <p><strong>Total Amount:</strong> @order.TotalAmount.ToString("C")</p>
+
+                <h3>Order Items</h3>
+                <ul>
+                    @if (order.OrderItems == null)
+                    {
+                        <li><strong>No Order Items Found</strong></li>
+                    }
+                    else {
+                        @foreach (var item in order.OrderItems)
+                        {
+                            <li>
+                                Order Item ID: @item.OrderItemId,
+                                Product ID: @item.ProductId,
+                                Quantity: @item.Quantity,
+                                Unit Price: @item.UnitPrice.ToString("C")
+                            </li>
+                        }
+                    }
+                </ul>
         }
     </ul>
+}
+
+    
 </div>
+<!-- Product creation form -->
+<form method="post">
+    <div>
+        <h2>Add a new Order </h2>
+        <h3> --------------------------- </h3>
+        <br />
+        <label asp-for="Order.OrderDate"></label>
+        <input asp-for="Order.OrderDate" />
+        <span asp-validation-for="Order.OrderDate"></span>
+
+        <br />
+        <label asp-for="Order.UserId"></label>
+        <input asp-for="Order.UserId" />
+        <span asp-validation-for="Order.UserId"></span>
+
+        <br />
+        <label asp-for="Order.Status"></label>
+        <input asp-for="Order.Status" />
+        <span asp-validation-for="Order.Status"></span>
+
+        <br />
+        <label asp-for="Order.TotalAmount"></label>
+        <input asp-for="Order.TotalAmount" />
+        <span asp-validation-for="Order.TotalAmount"></span>
+    </div>
+
+    <!-- Add other input fields as needed -->
+
+    <button type="submit">Create Order</button>
+</form>
