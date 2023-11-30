@@ -71,19 +71,59 @@
                     @foreach (var user in Model.Users)
                     {
 
-                        <p><strong>User ID:</strong> @user.UserId</p>
-                        <p><strong>Username:</strong> @user.Username</p>
-                        <p><strong>Email Address:</strong> @user.Email</p>
-                        <p><strong>Password:</strong> @user.Password</p>
-                        <p><strong>Credit Card Number:</strong> @user.CreditCardNumber.ToString("C")</p>
-                        <p><strong>Age:</strong> @user.Age</p>
-                        <p><strong>Interests:</strong> @user.Interests</p>
+                    <p><strong>User ID:</strong> @user.UserId</p>
+                    <p><strong>Username:</strong> @user.Username</p>
+                    <p><strong>Email Address:</strong> @user.Email</p>
+                    <p><strong>Password:</strong> @user.Password</p>
+                    <p><strong>Credit Card Number:</strong> @user.CreditCardNumber.ToString("C")</p>
+                    <p><strong>Age:</strong> @user.Age</p>
+                    <p><strong>Interests:</strong> @user.Interests</p>
 
-                        <h3>Order Items</h3>
+                    <h3>Order Items</h3>
 
                     }
                 </ul>
             </div>
+            <!-- Profile creation form -->
+            <form method="post">
+                <div>
+                    <h2>Add a new Profile </h2>
+                    <h3> --------------------------- </h3>
+                    <br />
+                    <label asp-for="User.UserId"></label>
+                    <input asp-for="User.UserId" />
+                    <span asp-validation-for="User.UserId"></span>
+
+                    <br />
+                    <label asp-for="User.Username"></label>
+                    <input asp-for="User.Username" />
+                    <span asp-validation-for="User.Username"></span>
+
+                    <br />
+                    <label asp-for="User.Password"></label>
+                    <input asp-for="User.Password" />
+                    <span asp-validation-for="User.Password"></span>
+
+                    <br />
+                    <label asp-for="User.CreditCardNumber"></label>
+                    <input asp-for="User.CreditCardNumber" />
+                    <span asp-validation-for="User.CreditCardNumber"></span>
+
+                    <br />
+                    <label asp-for="User.Age"></label>
+                    <input asp-for="User.Age" />
+                    <span asp-validation-for="User.Age"></span>
+
+                    <br />
+                    <label asp-for="User.Interests"></label>
+                    <input asp-for="User.Interests" />
+                    <span asp-validation-for="User.Interests"></span>
+                </div>
+
+                <!-- Add other input fields as needed -->
+
+                <button type="submit">Create Profile</button>
+            </form>
         </div>
         <!-- END OF PAGEBODY -->
         <!-- FOOTER -->
