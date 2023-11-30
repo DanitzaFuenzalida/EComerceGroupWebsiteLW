@@ -1,4 +1,4 @@
-﻿﻿@page
+﻿page
 @model ECommerceSite.Pages.UserModel
 <!--User.cs fields called directly to be displayed on page-->
 <!DOCTYPE html>
@@ -63,23 +63,24 @@
         <div id="pagebody">
             <div id="pagecontents">
                 @if (Model.Users != null && Model.Users.Any())
+                {
+                    <h2>Your Profile </h2>
+                    <h3> --------------------------- </h3>
+                    <ul>
+                        @foreach (var user in Model.Users)
+                        {
 
-                <h2>Your Profile </h2>
-                <h3> --------------------------- </h3>
-                <ul>
-                    @foreach (var user in Model.Users)
-                    {
+                            <p><strong>User ID:</strong> @user.UserId</p>
+                            <p><strong>Username:</strong> @user.Username</p>
+                            <p><strong>Email Address:</strong> @user.Email</p>
+                            <p><strong>Password:</strong> @user.Password</p>
+                            <p><strong>Credit Card Number:</strong> @user.CreditCardNumber.ToString("C")</p>
+                            <p><strong>Age:</strong> @user.Age</p>
+                            <p><strong>Interests:</strong> @user.Interests</p>
 
-                    <p><strong>User ID:</strong> @user.UserId</p>
-                    <p><strong>Username:</strong> @user.Username</p>
-                    <p><strong>Email Address:</strong> @user.Email</p>
-                    <p><strong>Password:</strong> @user.Password</p>
-                    <p><strong>Credit Card Number:</strong> @user.CreditCardNumber.ToString("C")</p>
-                    <p><strong>Age:</strong> @user.Age</p>
-                    <p><strong>Interests:</strong> @user.Interests</p>
-
-                    }
-                </ul>
+                        }
+                    </ul>
+                }
             </div>
             <!-- Profile creation form -->
             <form method="post">
