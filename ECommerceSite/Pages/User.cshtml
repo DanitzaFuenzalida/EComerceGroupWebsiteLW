@@ -1,11 +1,13 @@
-﻿﻿
+﻿@page
+@model ECommerceSite.Pages.UserModel
+<!--User.cs fields called directly to be displayed on page-->
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
 
-    <title>Home Page | Group4</title>
+    <title>My Profile |  Group4</title>
 
     <link rel="stylesheet" href="/css/index.css" />
 
@@ -60,54 +62,66 @@
         <!-- PAGEBODY -->
         <div id="pagebody">
             <div id="pagecontents">
-                <!-- MAIN BANNER -->
-                <div id="banner" class="section">
-                    <div class="container">
-                        <div class="banner-bg sitefont">
-                            <div class="col-md-6 col-xs-12 text-col vcenter">
-                                <img src="/img/MainPageBanner.png" alt="Autumn Collections" style="width:100%;" />
-                                <h1 class="banner-title">Autumn&#39;s&nbsp;here.</h1>
-                                <p class="info info-lg banner-info">Save 30% on select<br> seasonal collections.</p>
-                                <div class="banner-btn btn-row">
-                                    <a href="/Order" class="btn btn-blk btn-margin-0">Go</a> <!-- CHANGE Links to Order Page Currently-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- COLLECTION CARDS -->
-                <div id="collection-cards" class="sec-x1">
-                    <div class="container">
-                        <div class="collection-cards-row sitefont">
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="collection-card-1">
-                                    <h4>New Fall Styles</h4>
-                                    <img src="/img/FallStyles1.png" alt="New Fall Styles" />
-                                    <div class="btn-row">
-                                        <a href="/NewFallStyles" class="btn btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
-                                </div>
-                                <div class="collection-card-2">
-                                    <h4>Halloween Flair</h4>
-                                    <img src="/img/HalloweenFlair1.png" alt="Halloween Flair" />
-                                    <div class="btn-row">
-                                        <a href="/HalloweenFlair" class="btn btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
-                                </div>
-                                <div class="collection-card-3">
-                                    <h4>Summer Sales</h4>
-                                    <img src="/img/SummerSales1.png" alt="Summer Sales" />
-                                    <div class="btn-row">
-                                        <a href="/SummerSales" class="btn btn-primary btn-blk btn-collection">Go</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- SEPARATOR -->
-                <!-- DISCOVER SECTION -->
+                @if (Model.Users != null && Model.Users.Any())
+                {
+                    <h2>Your Profile </h2>
+                    <h3> --------------------------- </h3>
+                    <ul>
+                        @foreach (var user in Model.Users)
+                        {
+
+                            <p><strong>User ID:</strong> @user.UserId</p>
+                            <p><strong>Username:</strong> @user.Username</p>
+                            <p><strong>Email Address:</strong> @user.Email</p>
+                            <p><strong>Password:</strong> @user.Password</p>
+                            <p><strong>Credit Card Number:</strong> @user.CreditCardNumber</p>
+                            <p><strong>Age:</strong> @user.Age</p>
+                            <p><strong>Interests:</strong> @user.Interests</p>
+
+                        }
+                    </ul>
+                }
             </div>
+            <!-- Profile creation form -->
+            <form method="post">
+                <div>
+                    <h2>Add a new Profile </h2>
+                    <h3> --------------------------- </h3>
+                    <br />
+                    <label asp-for="User.UserId"></label>
+                    <input asp-for="User.UserId" />
+                    <span asp-validation-for="User.UserId"></span>
+
+                    <br />
+                    <label asp-for="User.Username"></label>
+                    <input asp-for="User.Username" />
+                    <span asp-validation-for="User.Username"></span>
+
+                    <br />
+                    <label asp-for="User.Password"></label>
+                    <input asp-for="User.Password" />
+                    <span asp-validation-for="User.Password"></span>
+
+                    <br />
+                    <label asp-for="User.CreditCardNumber"></label>
+                    <input asp-for="User.CreditCardNumber" />
+                    <span asp-validation-for="User.CreditCardNumber"></span>
+
+                    <br />
+                    <label asp-for="User.Age"></label>
+                    <input asp-for="User.Age" />
+                    <span asp-validation-for="User.Age"></span>
+
+                    <br />
+                    <label asp-for="User.Interests"></label>
+                    <input asp-for="User.Interests" />
+                    <span asp-validation-for="User.Interests"></span>
+                </div>
+
+                <!-- Add other input fields as needed -->
+
+                <button type="submit">Create Profile</button>
+            </form>
         </div>
         <!-- END OF PAGEBODY -->
         <!-- FOOTER -->

@@ -132,6 +132,11 @@ input {
     display: flex;
 }
 
+.col-img {
+    height: 500px;
+    width: 500px;
+}
+
 .collection-card-1 {
     display: inline-block;
     float: left;
