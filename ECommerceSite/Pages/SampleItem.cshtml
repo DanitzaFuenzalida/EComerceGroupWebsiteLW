@@ -1,13 +1,11 @@
-﻿@page
-@model ECommerceSite.Pages.UserModel
-<!--User.cs fields called directly to be displayed on page-->
+﻿﻿
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
 
-    <title>My Profile |  Group4</title>
+    <title>Sample Item | Group4</title>
 
     <link rel="stylesheet" href="/css/index.css" />
 
@@ -62,71 +60,22 @@
         <!-- PAGEBODY -->
         <div id="pagebody">
             <div id="pagecontents">
-                @if (Model.Users != null && Model.Users.Any())
-                {
-                    <h2>Your Profile </h2>
-                    <h3> --------------------------- </h3>
-                    <ul>
-                        @foreach (var user in Model.Users)
-                        {
-
-                            <p><strong>User ID:</strong> @user.UserId</p>
-                            <p><strong>Username:</strong> @user.Username</p>
-                            <p><strong>Email Address:</strong> @user.Email</p>
-                            <p><strong>Password:</strong> @user.Password</p>
-                            <p><strong>Credit Card Number:</strong> @user.CreditCardNumber</p>
-                            <p><strong>Age:</strong> @user.Age</p>
-                            <p><strong>Interests:</strong> @user.Interests</p>
-
-                        }
-                    </ul>
-                }
-            </div>
-            <!-- Profile creation form -->
-            <form method="post">
-                <div>
-                    <h2>Add a new Profile </h2>
-                    <h3> --------------------------- </h3>
-                    <br />
-                    <label asp-for="User.UserId"></label>
-                    <input asp-for="User.UserId" />
-                    <span asp-validation-for="User.UserId"></span>
-
-                    <br />
-                    <label asp-for="User.Username"></label>
-                    <input asp-for="User.Username" />
-                    <span asp-validation-for="User.Username"></span>
-
-                    <br />
-                    <label asp-for="User.Email"></label>
-                    <input asp-for="User.Email" />
-                    <span asp-validation-for="User.Email"></span>
-
-                    <br />
-                    <label asp-for="User.Password"></label>
-                    <input asp-for="User.Password" />
-                    <span asp-validation-for="User.Password"></span>
-
-                    <br />
-                    <label asp-for="User.CreditCardNumber"></label>
-                    <input asp-for="User.CreditCardNumber" />
-                    <span asp-validation-for="User.CreditCardNumber"></span>
-
-                    <br />
-                    <label asp-for="User.Age"></label>
-                    <input asp-for="User.Age" />
-                    <span asp-validation-for="User.Age"></span>
-
-                    <br />
-                    <label asp-for="User.Interests"></label>
-                    <input asp-for="User.Interests" />
-                    <span asp-validation-for="User.Interests"></span>
+                <div class="product">
+                    <div class="container sitefont">
+                        <div class="item-name">
+                            <h2>Sample Product</h2>
+                        </div>
+                        <div class="item-image">
+                            <a href="/Order">
+                                <img src="/img/furniturePlaceholder_500x500.jpg" alt="Product Image" />
+                            </a> <!-- CHANGE Links to Order Page Currently-->
+                        </div>
+                        <div class="item-buy-btn">
+                            <button onclick="location.href='/ShoppingCart/'">Order Now</button>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Add other input fields as needed -->
-
-                <button type="submit">Create Profile</button>
-            </form>
+            </div>
         </div>
         <!-- END OF PAGEBODY -->
         <!-- FOOTER -->
