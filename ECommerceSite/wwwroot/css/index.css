@@ -154,6 +154,20 @@ input {
     padding: 40px;
 }
 
+.product {
+    margin-left: 20%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+
+.item-name {
+    padding-bottom: 20px;
+}
+
+.item-buy-btn {
+    padding-top: 20px;
+}
+
 .product-list-row {
     display: flex;
 }
