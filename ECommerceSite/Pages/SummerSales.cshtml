@@ -1,5 +1,5 @@
 ﻿@page
-@model ECommerceSite.Pages.SummerSalesModel
+@model ECommerceSite.Pages.NewFallStylesModel
 
 <!DOCTYPE html>
 
@@ -7,9 +7,23 @@
 
 <head>
 
-    <title>Halloween Flair Collection | Group4</title>
+    <title>Summer Sales Collection | Group4</title>
 
     <link rel="stylesheet" href="/css/index.css" />
+    <style>
+        .collection-cards-row {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Centers items horizontally */
+            width: 80%;
+        }
+
+        .product {
+            text-align: center; /* Center content inside each product */
+            margin-bottom: 20px; /* Add some space between the products */
+        }
+    </style>
+
 
 </head>
 
@@ -66,32 +80,31 @@
                 <div id="collection-cards" class="sec-x1">
                     <div class="container">
                         <div class="collection-cards-row sitefont">
-                            <div class="col-sm-4 col-xs-12">
-                                <div class="product-1">
-                                    <img src="/img/furniturePlaceholder_500x500.jpg" alt="Product 1" />
-                                    <h4>Sample Product</h4>
-                                    <div class="btn-row">
-                                        <a href="/Order" class="btn btn-blk btn-collection">Order</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
+                            <div class="product">
+                                <img src="/img/SummerChair1.png" alt="Chair" />
+                                <h4>Chair</h4>
+                                <div class="btn-row">
+                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
                                 </div>
-                                <div class="product-2">
-                                    <img src="/img/furniturePlaceholder_500x500.jpg" alt="Product 2" />
-                                    <h4>Sample Product</h4>
-                                    <div class="btn-row">
-                                        <a href="/Order" class="btn btn-blk btn-collection">Order</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
+                            </div>
+                            <div class="product">
+                                <img src="/img/SummerTable1.png" alt="Table" />
+                                <h4>Table</h4>
+                                <div class="btn-row">
+                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
                                 </div>
-                                <div class="product-3">
-                                    <img src="/img/furniturePlaceholder_500x500.jpg" alt="Product 3" />
-                                    <h4>Sample Product</h4>
-                                    <div class="btn-row">
-                                        <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a> <!-- CHANGE Links to Order Page Currently-->
-                                    </div>
+                            </div>
+                            <div class="product">
+                                <img src="/img/SummerBed1.png" alt="Bed" />
+                                <h4>Bed</h4>
+                                <div class="btn-row">
+                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- END OF COLLECTION CARDS -->
             </div>
         </div>
         <!-- END OF PAGEBODY -->
