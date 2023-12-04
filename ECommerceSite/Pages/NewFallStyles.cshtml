@@ -88,21 +88,27 @@
                                 <img src="/img/FallChair1.png" alt="Chair" />
                                 <h4>Chair</h4>
                                 <div class="btn-row">
-                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
+                                    <form method="post" asp-page-handler="OrderChair">
+                                        <button type="submit" class="btn btn-primary">Order Chair</button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="product">
                                 <img src="/img/FallTable1.png" alt="Table" />
                                 <h4>Table</h4>
                                 <div class="btn-row">
-                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
+                                    <form method="post" asp-page-handler="OrderTable">
+                                        <button type="submit" class="btn btn-primary">Order Table</button>
+                                    </form>
                                 </div>
                             </div>
                             <div class="product">
                                 <img src="/img/FallBed1.png" alt="Bed" />
                                 <h4>Bed</h4>
                                 <div class="btn-row">
-                                    <a href="/Order" class="btn btn-primary btn-blk btn-collection">Order</a>
+                                    <form method="post" asp-page-handler="OrderBed">
+                                        <button type="submit" class="btn btn-primary">Order Bed</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
